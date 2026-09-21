@@ -1,0 +1,20 @@
+{
+"name": "Steve",
+"profession": "Software Engineer",
+"age": 20,
+"residence": "S. Korea",
+"adress": "S.Korea, Busan",
+"Languages": ["Uzbek", "Korean", "English"],
+"skills": ["Html","Css","Js","NodeJS","Python"],
+"extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+"work_place": "IT Company",
+"service_desc": "Anet minim nollit non deserunt ullanco est sit aliqua dolor do anet sint. Velit officia consequat",
+"city": "Denau",
+"about_me": "Loren ipsum dolor Sit anet, consectetur adipiscing elit. Et, volutfot feugiat placerat lobortis. Natog",
+"flower _name": ["Tulip", "Daffod11", "Poppy", "Sunflower","Bluebell", "Rose", "Snowdrop", "Cherry", "bosson"],
+"title": ["Flower", "Seedlings", "Gardner", "O1d", "New"],
+"flower desc": ["what is a flower?", "What is a Seedling?", "Who is Gardner?"],
+"flower_price": ["15$","25$", "12$", "20$", "35$", "30$", "22$", "19$", "9$"],
+"famous words": ["world is Beautiful with Flowers"],
+"famous_name": ["Steve Jobs"]
+}
