@@ -1,1 +1,140 @@
-<h1>Hello World toy are in author</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css" />
+    <script src="//maxcdn.bootstrapcdn.com//bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Porfolio</title>
+</head>
+<body>
+    <div class="fream">
+        <div class="main_frame">
+<div class="left_frame">
+    <div class="avatar">
+        <div class="avatar_1">
+<img class="avatar_img" src="images/Profile.png" alt="">
+<h4 class="name" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black; font-size: 20px;"><%=user.name%></h4>
+<span style="margin-bottom: 15px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: gray;"><%=user.profession%></span>
+        </div>
+        <div class="avatar_2">
+<span>
+<img style="width: 24px; height: 24px;
+" src="icon/Facebook.svg" alt="">
+</span>
+<span>
+<img style="width: 24px; height: 24px;
+" src="icon/Twitter.svg" alt="">
+</span>
+<span>
+<img style="width: 24px; height: 24px;
+" src="icon/Instagram.svg" alt="">
+</span>
+<span>
+<img style="width: 24px; height: 24px;
+" src="icon/Youtube.svg" alt="">
+</span>
+<span>
+<img style="width: 24px; height: 24px;
+" src="icon/Dribbble.svg" alt="">
+</span>
+        </div>
+    </div>
+    <div class="marginer"></div>
+    <div class="about">
+        <div class="about_1">
+            <h3 class="about_text">Age:</h3>
+            <h4 class="about_span"><%=user.age%></h4>
+        </div>
+        <div class="about_1">
+            <h3 class="about_text">Residence:</h3>
+            <h4 class="about_span"><%=user.residence%></h4>
+        </div>
+        <div class="about_1">
+            <h3 class="about_freelance">Freelance:</h3>
+            <h4 style="color: lightgreen;" class="about_span">Avalible</h4>
+        </div>
+        <div class="about_1">
+            <h3 class="about_text">Address:</h3>
+            <h4 class="about_span"><%=user.adress%></h4>
+        </div>
+    </div>
+     <div class="marginer"></div>
+    <div class="lang">
+        <h2 class="lang_lang">Languages</h2>
+        <div class="lang_1">
+        <a class="lang_text"><%=user.Languages[0]%></a>
+        <a class="lang_span">100%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/100.png" alt="">
+        <div class="lang_1">
+            <a class="lang_text"><%=user.Languages[1]%></a>
+        <a class="lang_span">80%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/80.png" alt="">
+        <div class="lang_1">
+            <a class="lang_text"><%=user.Languages[2]%></a>
+        <a class="lang_span">60%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/60.png" alt="">
+    </div>
+     <div class="marginer"></div>
+    <div class="skills">
+        <h2 class="skill_lang">Skills</h2>
+        <div class="skill_1">
+        <a class="skill_text"><%=user.skills[0]%></a>
+        <a class="skill_span">90%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/90.png" alt="">
+        <div class="skill_1">
+            <a class="skill_text"><%=user.skills[1]%></a>
+        <a class="skill_span">85%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/85.png" alt="">
+        <div class="skill_1">
+            <a class="skill_text"><%=user.skills[2]%></a>
+        <a class="skill_span">80%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/80.png" alt="">
+        <div class="skill_1">
+            <a class="skill_text"><%=user.skills[3]%></a>
+        <a class="skill_span">75%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/75.png" alt="">
+        <div class="skill_1">
+            <a class="skill_text"><%=user.skills[4]%></a>
+        <a class="skill_span">85%</a>
+        </div>
+        <img style="width: 218px; height: 4px;" src="box_imgs/85.png" alt="">
+    </div>
+     <div class="marginer"></div>
+    <div class="extra_skills">
+        <h2 class="extra_lang">Extra skills</h2>
+        <div class="extra_1">
+            <img class="extra_img" src="icon/Icons.png" alt="">
+            <p class="extra_text"><%=user.extra_skills[0]%></p>
+        </div>
+        <div class="extra_1">
+            <img class="extra_img" src="icon/Icons.png" alt="">
+            <p class="extra_text"><%=user.extra_skills[1]%></p>
+        </div>
+        <div class="extra_1">
+            <img class="extra_img" src="icon/Icons.png" alt="">
+            <p class="extra_text"><%=user.extra_skills[2]%></p>
+        </div>
+        <div class="extra_1">
+            <img class="extra_img" src="icon/Icons.png" alt="">
+            <p class="extra_text"><%=user.extra_skills[3]%></p>
+        </div>
+    </div>
+     <div class="marginer"></div>
+     <div class="left_btn">
+        <button class="left_btn_1">Download CV<img class="left_btn_img" src="icon/Vector.svg" alt=""></button>
+     </div>
+</div>
+<div class="mid_frame"></div>
+<div class="right_frame"></div>
+        </div>
+    </div>
+</body>
+</html>
