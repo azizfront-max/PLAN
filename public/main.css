@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.frame {
+display: flex;
+justify-content: center;
+flex-direction: row;
+box-sizing: border-box;
+background-color: gray;
+}
+
+
+.main_frame {
+    position: relative;
+    width: 1440px;
+    height: 1312px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+    background: #E5E5E5;
+}
+
+.left_frame {
+    position: relative;
+    width: 305px;
+    height: 1315px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: white;
+
+    
+}
+
+.mid_frame {
+position: relative;
+width: 970px;
+height: 1315px;
+background-color: white;
+display: flex;
+flex-direction: column;
+margin-left: 30px;
+margin-right: 27px;
+}
+
+
+.right_frame {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 108px;
+height: 1315px;
+background-color: white;
+}
+
+.marginer {
+    position: relative;
+    border: 1.5px solid #f0f0f6;
+    width: 220px;
+    height: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    margin-right: 45px;
+
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 219px;
+    height: 282px;
+    padding-top: 50px;
+    
+}
+
+.avatar_1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name{
+    margin-top: 31px;
+    margin-bottom: 15px;
+}
+
+.avatar_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.avatar_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+    ;
+    width: 220px;
+    height: 126px;
+
+}
+
+.about_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.about_text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: black;
+    background-color: orange;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    margin-top: 0;
+}
+
+.about_freelance {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: black;
+    background-color: orange;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    margin-top: 0;
+    
+}
+
+.about_span {
+    height: 25px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.about_freelance_span {
+    height: 25px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.lang {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.lang_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 9px;
+}
+
+.lang_lang {
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
+}
+
+.lang_text {
+    color: gray;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lang_span {
+    color: gray;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.skill_lang {
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
+}
+
+.skill_1 {
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 9px;
+}
+
+.skill_text {
+ color: gray;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skill_span{
+    color: gray;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.extra_skills {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.extra_lang {
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
+}
+
+.extra_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    margin-top: 9px;
+    gap: 15px;
+    align-items: center;
+}
+
+.extra_text {
+    color: gray;
+    margin: 0;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.extra_img {
+width: 15px;
+height: 15px;
+}
+
+.left_btn {
+display: flex;
+align-items: center;
+}
+
+.left_btn_1 {
+background-color: orange;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 49px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+border: 0;
+transition:
+    box-shadow 0.2s ease,
+    border-radius 0.2s ease;
+
+  transition-delay: 0.1s;
+}
+
+.left_btn_1:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+.left_btn_img {
+margin-left: 19px;
+padding-right: 40px;
+}
