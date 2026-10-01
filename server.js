@@ -42,16 +42,16 @@ app.get("/gift", function(req, res) {
     res.end(`<h1 style = "background: green" >Siz sovg'alar bolimidasiz</h1>`)
 })
 
-app.get("/", function(req, res) {
-    res.render(`project`)
-})
+// app.get("/", function(req, res) {
+//     res.render(`project`)
+// })
 
-app.get('/harid', function(req,res) {
-    res.render('hariq')
+app.get('/', function(req,res) {
+    res.render('reja')
 })
 
 const server = http.createServer(app)
 let PORT = 3000;
 server.listen(PORT, function(){
-    console.log(`The server is running secessfully on port: ${PORT}`)
+    console.log(`The server is running secessfully on port: ${PORT}, http://localhost:${PORT}`)
 })
