@@ -19,7 +19,6 @@ app.use(express.urlencoded({extended: true}))
 
 //2: Session
 
-
 //3 - Views kodlar
 app.set("views", "views")
 app.set("view engine", "ejs")
