@@ -15,7 +15,8 @@ async function startServer() {
         const collections = await db.listCollections().toArray();
         console.log("Collections:", collections.map(c => c.name));
 
-        const app = require("./app");
+        const CreateApp = require("./app");
+        const app = CreateApp(db);
         const server = http.createServer(app);
         const PORT = 3000;
 
