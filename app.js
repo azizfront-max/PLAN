@@ -27,18 +27,14 @@ module.exports = function (db) {
   app.set("view engine", "ejs");
 
   //4 - Routing kodlar
-  app.post("/create-item", (req, res) => {
-    console.log(req.body);
-    res.send("Success");
+  app.post("/create-item", async (req, res) => {
     const new_plan = req.body.reja;
-    db.collection("plans").insertOne({ reja: new_plan }, (err, data) => {
-      if (err) {
-        console.log(err);
-        req.end("New plan add ERROR");
-      } else {
-        req.end("Successfully");
-      }
-    });
+    const result = await db.collection("plans")
+     .insertOne({ reja: new_plan });
+     res.json({
+      _id: result.insertedId,
+      reja: new_plan
+     })
   });
 
   app.get("/author", (req, res) => {
