@@ -19,7 +19,7 @@ form.addEventListener("submit", function (e) {
     e.preventDefault()
 
     axios
-    .post("create-item", {reja: createfield.value})
+    .post("/create-item", {reja: createfield.value})
     .then((response) => {
         document.getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data))
@@ -29,5 +29,28 @@ form.addEventListener("submit", function (e) {
     .catch((err) => {
         console.log("Try again")
     })
+})
+
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete-me")) {
+        if (confirm("You really want to delete?")) {
+            axios.post("/delete-item", { id: e.target.getAttribute("data-id") })
+                .then((response) => {
+                    console.log(response.data)
+                    
+                    const li = e.target.closest("li")
+                    const ul = li.parentElement
+                    
+                    li.remove()
+                    
+                    if (ul.querySelectorAll("li").length === 0) {
+                        ul.style.display = "none"
+                    }
+                })
+                .catch((err) => {
+                    console.log("ERROR:", err)
+                })
+        }
+    }
 })
 
