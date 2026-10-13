@@ -1,5 +1,6 @@
 console.log("Web server boshlash");
 const express = require("express");
+const mongodb = require("mongodb")
 
 const fs = require("fs");
 let user;
@@ -27,15 +28,41 @@ module.exports = function (db) {
   app.set("view engine", "ejs");
 
   //4 - Routing kodlar
-  app.post("/create-item", async (req, res) => {
-    const new_plan = req.body.reja;
-    const result = await db.collection("plans")
-     .insertOne({ reja: new_plan });
-     res.json({
-      _id: result.insertedId,
-      reja: new_plan
-     })
-  });
+ app.post("/create-item", async (req, res) => {
+    try {
+        const new_plan = req.body.reja;
+        if (!new_plan || new_plan.trim() === "") {
+            return res.status(400).json({ error: "Поле пустое" });
+        }
+
+        const result = await db.collection("plans").insertOne({ reja: new_plan });
+
+        res.json({
+            _id: result.insertedId,
+            reja: new_plan
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "New plan add ERROR" });
+    }
+});
+
+  app.post("/delete-item", async (req, res) => {
+    try {
+        const id = req.body.id;
+        console.log("Удаляем:", id);
+
+        const result = await db.collection("plans").deleteOne({
+            _id: new mongodb.ObjectId(id)
+        });
+
+        console.log("Удалено:", result.deletedCount);
+        res.json({ state: "success", deletedCount: result.deletedCount });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "Delete ERROR" });
+    }
+});
 
   app.get("/author", (req, res) => {
     res.render("author", { user: user });
