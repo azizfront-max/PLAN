@@ -47,6 +47,20 @@ module.exports = function (db) {
     }
 });
 
+app.post("/delete-all", async (req, res) => {
+  try{
+     if(req.body.delete_all) {
+      const result = await db.collection("plans").deleteMany({})
+      console.log("All cleaned:", result.deletedCount)
+      res.json({state: "success", deletedCount: result.deletedCount})
+     } else {
+      res.status(400).json({error: "delete_all error"})
+     }
+  } catch(err) {
+    console.log("delete all error:", err)
+  }
+})
+
   app.post("/delete-item", async (req, res) => {
     try {
         const id = req.body.id;
