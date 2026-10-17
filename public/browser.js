@@ -52,5 +52,28 @@ document.addEventListener("click", function (e) {
                 })
         }
     }
+
+    if (e.target.classList.contains("edit-me")) {
+        const li = e.target.closest("li")
+        const span = li.querySelector(".item-text")
+        const id = e.target.getAttribute("data-id")
+      let userInput = prompt("O'zgartirish kiriting", span.innerHTML
+    )
+     if (userInput) {
+        console.log(userInput)
+        axios.post("/edit-item", {id: id, 
+        reja: userInput,
+     })
+     .then(response => {
+       console.log(response.data)
+       span.innerHTML = userInput
+     })
+     .catch(err => {
+       console.log("ERROR:", err)
+     })
+    }
+ } 
 })
+
+
 

@@ -64,6 +64,20 @@ module.exports = function (db) {
     }
 });
 
+app.post("/edit-item", async (req, res) => {
+try {
+const {id, reja} = req.body
+const result = await db.collection("plans").updateOne(
+  { _id: new mongodb.ObjectId(id)},
+  { $set: {reja: reja}}
+)
+console.log("Edited:", result.modifiedCount)
+res.json({state: "success"})
+} catch(err) {
+console.log(err)
+}
+})
+
   app.get("/author", (req, res) => {
     res.render("author", { user: user });
   });
