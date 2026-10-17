@@ -1,4 +1,3 @@
-console.log("Frontend Js is working")
 const form = document.getElementById("create-form")
 
 function itemTemplate(item) {
@@ -73,6 +72,18 @@ document.addEventListener("click", function (e) {
      })
     }
  } 
+})
+
+
+document.getElementById("clean-all").addEventListener("click", function() {
+    axios.post("/delete-all", {delete_all: true})
+    .then(response => {
+        alert(response.data.message || "All plans are cleaned")
+        document.location.reload()
+    })
+    .catch(err => {
+        console.log("Delete all error:", err)
+    })
 })
 
 
